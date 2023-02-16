@@ -1,0 +1,258 @@
+1 <!DOCTYPE html>
+2 <html lang="en">
+3 <head>
+4 <meta charset="UTF-8" />
+5 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+6 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+7 <title>SHRAVANI'S YOGA STUDIO</title>
+8 </head>
+9 <link rel="preconnect" href="https://fonts.googleapis.com" />
+10 <link rel="stylesheet" href="css/style.css" />
+11
+12 <!-- this is font api we can include it here (or ) we can also include it outside head and outside style. between head and style -->
+13
+14 <!-- @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap'); -->
+15
+16 <!-- will write here the css reset. that is it will change the default css style set by the browsers * -->
+17
+18
+19
+20 <body>
+21 <header class="header">
+22 
+23 <!-- mid box for navbar -->
+24 <div class="mid">
+25 <ul class="navbar">
+26 <li><a href="#" class="active">Home</a></li>
+27 <li><a href="#">About</a></li>
+28 <li><a href="#">fitness calculator</a></li>
+29 <li><a href="#">contact us</a></li>
+30 </ul>
+31 </div>
+32 <!-- right box for buttons -->
+33 <div class="right">
+34 <button class="btn">call us now</button>
+35 <button class="btn">email us</button>
+36 </div>
+37 </header>
+38
+39 <!-- to create the landing page for the user we create the conatiner after the header -->
+40
+41 <div class="container">
+42 <h1>YOGA AND WELLNESS STUDIO</h1>
+43 <form action="noaction.php">
+44 <!-- here since input in an inline tag we can declare a class in it and declare input element as block level since it is inline (or we can
+45 <div class="form-group">
+46 <input type="text" name="" placeholder="enter your Name" />
+47 </div>
+48 <div class="form-group">
+49 <input type="text" name="" placeholder="enter your age" />
+50 </div>
+51 <div class="form-group">
+52 <input type="text" name="" placeholder="enter your Address" />
+53 </div>
+54 <div class="form-group">
+55 <input type="text" name="" placeholder="enter your Phone number" />
+56 </div>
+57 <button class="btn">Submit</button>
+58 </form>
+59 </div>
+60 <!-- Code injected by live-server -->
+61 <script>
+62 // <![CDATA[ <-- For SVG support
+63 if ('WebSocket' in window) {
+64 (function () {
+65 function refreshCSS() {
+66 var sheets = [].slice.call(document.getElementsByTagName("link"));
+67 var head = document.getElementsByTagName("head")[0];
+68 for (var i = 0; i < sheets.length; ++i) {
+69 var elem = sheets[i];
+70 var parent = elem.parentElement || head;
+71 parent.removeChild(elem);
+72 var rel = elem.rel;
+73 if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+74 var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+75 elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+76 }
+77 parent.appendChild(elem);
+78 }
+79 }
+80 var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+81 var address = protocol + window.location.host + window.location.pathname + '/ws';
+82 var socket = new WebSocket(address);
+83 socket.onmessage = function (msg) {
+84 if (msg.data == 'reload') window.location.reload();
+85 else if (msg.data == 'refreshcss') refreshCSS();
+86 };
+87 if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+88 console.log('Live reload enabled.');
+89 sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+90 }
+91 })();
+92 }
+93 else {
+94 console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+95 }
+96 // ]]>
+97 </script>
+98 </body>
+body {
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  
+  background: url(../img/bck2.jpg);
+  background-size: cover;
+}
+
+
+
+
+.mid {
+  display: block;
+  width: 52%;
+  margin: 20px auto;
+}
+ 
+.right {
+  display: inline-block;
+  position: absolute;
+  right: 41px;
+  top: 32px;
+}
+ 
+.navbar {
+  display: inline-block;
+}
+ 
+.navbar li {
+  display: inline-block;
+  font-size: 25px;
+}
+ 
+.navbar li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 34px 23px;
+  font-weight: bold;
+}
+ 
+.navbar li a:hover,
+.navbar li a.active {
+ 
+  color: red;
+  text-decoration: underline;
+}
+ 
+.btn {
+  font-family: "Roboto Mono", monospace;
+  margin: 0px 9px;
+  color: white;
+  background-color: black;
+  margin: 0px 9px;
+  padding: 4px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+ 
+.btn:hover {
+  background-color: yellow;
+  color: black;
+}
+ 
+.container {
+  padding: 75px;
+  border-radius: 28px;
+  width: 35%;
+  margin: 32 80px;
+}
+ 
+.form-group input {
+  text-align: center;
+  display: block;
+  width: 500px;
+  margin: 11px auto;
+  padding: 1px;
+  border-radius: 8px;
+  font-size: 25px;
+  font-family: "Roboto Mono", monospace;
+}
+ 
+.container h1 {
+  text-align: center;
+  color: rgb(128, 10, 10);
+  animation: text-flicker 2s linear infinite;
+}
+ 
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+ 
+  2% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+ 
+  8% {
+    opacity: 0.1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+ 
+  9% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+  }
+ 
+  12% {
+    opacity: 0.1;
+    text-shadow: 0px 0px rgba(242, 22, 22, 1);
+  }
+ 
+  20% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+ 
+  25% {
+    opacity: 0.3;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+ 
+  30% {
+    opacity: 1;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+ 
+  70% {
+    opacity: 0.7;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+ 
+  72% {
+    opacity: 0.2;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+ 
+  77% {
+    opacity: .9;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+ 
+  100% {
+    opacity: .9;
+    text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+  }
+}
+ 
+.container button {
+  display: block;
+  width: 500px;
+  margin: 25px auto;
+  text-align: center;
+  font-size: 25px;
+}
+
+
